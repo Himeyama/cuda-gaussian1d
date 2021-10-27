@@ -15,13 +15,16 @@ rb_ary_cuda_gaussian1d(VALUE input, VALUE sigma, VALUE mode, VALUE truncate){
   VALUE _r = rb_ary_new();
   T t = NUM2DBL(truncate);
   T sd = NUM2DBL(sigma);
+  long m = NUM2LONG(mode);
   std::vector<T> _input(RARRAY_LEN(input));
   for(long i = 0; i < _input.size(); i++)
-    _input[i] = rb_ary_entry(input, i);
+    _input[i] = (T)NUM2DBL(rb_ary_entry(input, i));
 
-  if(mode == 0){
+  if(m == 0)
     r = gaussian1d<T>(_input, t, sd);
-  }
+
+  for(long i = 0; i < r.size(); i++)
+    rb_ary_store(_r, i, DBL2NUM(r[i]));
 
   return _r;
 }
