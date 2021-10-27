@@ -20,15 +20,15 @@ rb_ary_cuda_gaussian1d(VALUE input, VALUE sigma, VALUE mode, VALUE truncate){
     _input[i] = rb_ary_entry(input, i);
 
   if(mode == 0){
-    r = gaussian1d<T>(input, t, sd);
+    r = gaussian1d<T>(_input, t, sd);
   }
 
   return _r;
 }
 
 extern "C" {
-  void Init_gaussian1d(void) {
-    rb_define_private_method(rb_cArray, "gpu_gaussian1d_float", rb_ary_cuda_gaussian1d<float>, 2);
-    rb_define_private_method(rb_cArray, "gpu_gaussian1d_double", rb_ary_cuda_gaussian1d<double>, 2);
+  void Init_gaussian1d() {
+    rb_define_private_method(rb_cArray, "gpu_gaussian1d_double", rb_ary_cuda_gaussian1d<double>, 3);
+    rb_define_private_method(rb_cArray, "gpu_gaussian1d_float", rb_ary_cuda_gaussian1d<float>, 3);
   }
 }

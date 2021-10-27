@@ -1,5 +1,5 @@
 # cuda-convolve
-[![Rubocop](https://github.com/Himeyama/cuda-convolve/actions/workflows/rubocop.yml/badge.svg)](https://github.com/Himeyama/cuda-convolve/actions/workflows/rubocop.yml)
+[![Rubocop](https://github.com/Himeyama/cuda-gaussian1d/actions/workflows/rubocop.yml/badge.svg)](https://github.com/Himeyama/cuda-gaussian1d/actions/workflows/rubocop.yml)
 
 ## Installation
 
