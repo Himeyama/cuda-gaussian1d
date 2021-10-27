@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${HOMEBREW_PREFIX}/include",
+                "${HOMEBREW_PREFIX}/Cellar/ruby/3.0.2/include/ruby-3.0.0/x86_64-linux",
+                "/home/linuxbrew/.linuxbrew/Cellar/ruby/3.0.2/include/ruby-3.0.0/ruby/internal/intern",
+                "/home/linuxbrew/.linuxbrew/Cellar/ruby/3.0.2/include/ruby-3.0.0"
+            ],
+            "defines": [],
+            "compilerPath": "/home/linuxbrew/.linuxbrew/bin/clang",
+            "cStandard": "c17",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "linux-clang-x64"
+        }
+    ],
+    "version": 4
+}

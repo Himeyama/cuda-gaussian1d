@@ -3,7 +3,8 @@
  *  Licensed under the MIT License.
  */
 
-#include <cuda-gaussian1d.hpp>
+#include <gaussian1d.hpp>
+#include <iostream>
 #include <ruby.h>
 #include <vector>
 
