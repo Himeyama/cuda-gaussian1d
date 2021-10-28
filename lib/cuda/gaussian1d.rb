@@ -13,13 +13,17 @@ module CudaGaussian1d
       mode_n = modes[mode]
       raise "mode should be 'reflect'" unless mode_n
 
-      case type
-      when :float
-        gpu_gaussian1d_float(sigma, mode_n, truncate)
-      when :double
-        gpu_gaussian1d_double(sigma, mode_n, truncate)
+      if self[0].instance_of?(Array)
+        case type
+        when :float
+          gpu_gaussian1d_multi_float(sigma, mode_n, truncate)
+        when :double
+          gpu_gaussian1d_multi_double(sigma, mode_n, truncate)
+        else
+          raise "type should be 'double' or 'float'"
+        end
       else
-        raise "type should be 'double' or 'float'"
+        [self].gaussian1d(sigma, mode: :reflect, truncate: 4.0, type: :float)
       end
     end
   end
