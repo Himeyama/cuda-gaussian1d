@@ -1,4 +1,5 @@
 # cuda-convolve
+[![Gem](https://img.shields.io/gem/v/cuda-gaussian1d.svg)](https://rubygems.org/gems/cuda-gaussian1d)
 [![Rubocop](https://github.com/Himeyama/cuda-gaussian1d/actions/workflows/rubocop.yml/badge.svg)](https://github.com/Himeyama/cuda-gaussian1d/actions/workflows/rubocop.yml)
 
 ## Installation
