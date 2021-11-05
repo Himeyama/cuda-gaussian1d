@@ -4,13 +4,14 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${HOMEBREW_PREFIX}/include",
+                "${HOMEBREW_PREFIX}/lib/ruby/gems/3.0.0/extensions/x86_64-linux/3.0.0/numo-narray-0.9.2.0/numo/",
+                "${HOMEBREW_PREFIX}/lib/ruby/",
+                "${HOMEBREW_PREFIX}/Cellar/ruby/3.0.2/include/ruby-3.0.0/",
                 "${HOMEBREW_PREFIX}/Cellar/ruby/3.0.2/include/ruby-3.0.0/x86_64-linux",
-                "/home/linuxbrew/.linuxbrew/Cellar/ruby/3.0.2/include/ruby-3.0.0/ruby/internal/intern",
-                "/home/linuxbrew/.linuxbrew/Cellar/ruby/3.0.2/include/ruby-3.0.0"
+                "${HOMEBREW_PREFIX}/opt/libcuda-gaussian1d/include/"
             ],
             "defines": [],
-            "compilerPath": "/home/linuxbrew/.linuxbrew/bin/clang",
+            "compilerPath": "/usr/bin/gcc",
             "cStandard": "c17",
             "cppStandard": "c++14",
             "intelliSenseMode": "linux-clang-x64"
